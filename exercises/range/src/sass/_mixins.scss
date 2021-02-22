@@ -1,3 +1,41 @@
 @mixin range-thumb() {
+
+    &::-webkit-slider-thumb {
+        @content;
+          -webkit-appearance: none;
+          margin-top: -14px;
+        }
  
+    &::-moz-range-thumb {
+        @content;
+    }
+
+    &::-ms-thumb {
+        @content;
+    }
+}
+
+@mixin range-track() {
+
+    &::-webkit-slider-runnable-track {
+        @content;
+    }
+
+    &::-moz-range-track {
+        @content;
+    }
+
+    &::-ms-track {
+        cursor: pointer;
+        background: transparent;
+        border-color: transparent;
+        border-width: 16px 0;
+        color: transparent;
+      }
+
+}
+
+@mixin upper-lower {
+    border: 0.2px solid #010101;
+  border-radius: 2.6px;
 }
