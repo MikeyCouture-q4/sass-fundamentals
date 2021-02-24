@@ -3,3 +3,32 @@ body {
     color: #c69;
   }
 }
+
+%coolStyle{
+  padding:2px 10px;
+}
+%opac{
+  opacity: 0.5;
+}
+
+.btn{
+
+  &.btn-primary{
+    @extend %coolStyle;
+    border-radius: 2px;
+    border-style: solid;
+    background-color: rgb(204, 68, 102);
+    color: rgb(255, 255,255);
+    &:disabled{
+      @extend %opac
+    }
+  }
+
+  &.btn-secondary{
+    @extend %coolStyle;
+    background-color: rgb(237, 188, 200);
+    &:disabled{
+      @extend %opac
+    }
+  }
+}
