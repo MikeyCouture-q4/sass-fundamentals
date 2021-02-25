@@ -17,6 +17,6 @@ body {
     color: #000;
   }
   &:disabled {
-    opacity: 0.5;
+    opacity: $btn-disabled-opacity;
   }
 }
